@@ -1,0 +1,511 @@
+terraform_version = "1.0.6"
+
+planned_values = {
+	"outputs": {
+		"playlist_url": {
+			"name":      "playlist_url",
+			"sensitive": false,
+			"value":     undefined,
+		},
+	},
+	"resources": {
+		"spotify_playlist.playlist": {
+			"address":        "spotify_playlist.playlist",
+			"depends_on":     [],
+			"deposed_key":    "",
+			"index":          null,
+			"mode":           "managed",
+			"module_address": "",
+			"name":           "playlist",
+			"provider_name":  "registry.terraform.io/conradludgate/spotify",
+			"tainted":        false,
+			"type":           "spotify_playlist",
+			"values": {
+				"description": "This playlist was created by Terraform",
+				"name":        "Terraform Summer Playlist",
+				"public":      true,
+				"tracks": [
+					"37BZB0z9T8Xu7U3e65qxFy",
+					"0VjIjW4GlUZAMYd2vXMi3b",
+					"6OGogr19zPTM4BALXuMQpF",
+					"5QO79kh1waicV47BqGRL3g",
+					"7fBv7CLKzipRk6EC6TWHOB",
+					"7MXVkk9YMctZqd1Srtv4MB",
+					"6M3PsepEj5gyJoIi7Xvr7u",
+					"22VdIZQfgXJea34mQxlt81",
+				],
+			},
+		},
+	},
+}
+
+variables = {
+	"spotify_api_key": {
+		"name":  "spotify_api_key",
+		"value": "x_oSPuwb9RyyKHYHs2nsWvae-4SSTJWnHtI9KNi6PEl0uawMhHRJFui4SqeGQsXV",
+	},
+}
+
+resource_changes = {
+	"spotify_playlist.playlist": {
+		"address": "spotify_playlist.playlist",
+		"change": {
+			"actions": [
+				"create",
+			],
+			"after": {
+				"description": "This playlist was created by Terraform",
+				"name":        "Terraform Summer Playlist",
+				"public":      true,
+				"tracks": [
+					"5WDLRQ3VCdVrKw0njWe5E5",
+					"37BZB0z9T8Xu7U3e65qxFy",
+					"0VjIjW4GlUZAMYd2vXMi3b",
+					"6OGogr19zPTM4BALXuMQpF",
+					"5QO79kh1waicV47BqGRL3g",
+					"7fBv7CLKzipRk6EC6TWHOB",
+					"7MXVkk9YMctZqd1Srtv4MB",
+					"6M3PsepEj5gyJoIi7Xvr7u",
+					"22VdIZQfgXJea34mQxlt81",
+				],
+			},
+			"after_unknown": {
+				"id":          true,
+				"snapshot_id": true,
+				"tracks": [
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+				],
+			},
+			"before": null,
+		},
+		"deposed":        "",
+		"index":          null,
+		"mode":           "managed",
+		"module_address": "",
+		"name":           "playlist",
+		"provider_name":  "registry.terraform.io/conradludgate/spotify",
+		"type":           "spotify_playlist",
+	},
+}
+
+output_changes = {
+	"playlist_url": {
+		"change": {
+			"actions": [
+				"create",
+			],
+			"after":         undefined,
+			"after_unknown": true,
+			"before":        null,
+		},
+		"name": "playlist_url",
+	},
+}
+
+raw = {
+	"configuration": {
+		"provider_config": {
+			"spotify": {
+				"expressions": {
+					"api_key": {
+						"references": [
+							"var.spotify_api_key",
+						],
+					},
+					"auth_server": {
+						"constant_value": "https://oauth2.conrad.cafe",
+					},
+					"token_id": {
+						"constant_value": "3274ce15-6cc3-4f88-a11f-f4266bbe37eb",
+					},
+					"username": {
+						"constant_value": "test_nico",
+					},
+				},
+				"name":               "spotify",
+				"version_constraint": "~> 0.2.6",
+			},
+		},
+		"root_module": {
+			"outputs": {
+				"playlist_url": {
+					"description": "Visit this URL in your browser to listen to the playlist",
+					"expression": {
+						"references": [
+							"spotify_playlist.playlist.id",
+							"spotify_playlist.playlist",
+						],
+					},
+				},
+			},
+			"resources": [
+				{
+					"address": "spotify_playlist.playlist",
+					"expressions": {
+						"description": {
+							"constant_value": "This playlist was created by Terraform",
+						},
+						"name": {
+							"constant_value": "Terraform Summer Playlist",
+						},
+						"public": {
+							"constant_value": true,
+						},
+						"tracks": {
+							"references": [
+								"data.spotify_search_track.by_artist.tracks[0].id",
+								"data.spotify_search_track.by_artist.tracks[0]",
+								"data.spotify_search_track.by_artist.tracks",
+								"data.spotify_search_track.by_artist",
+								"data.spotify_search_track.by_artist.tracks[1].id",
+								"data.spotify_search_track.by_artist.tracks[1]",
+								"data.spotify_search_track.by_artist.tracks",
+								"data.spotify_search_track.by_artist",
+								"data.spotify_search_track.by_artist.tracks[2].id",
+								"data.spotify_search_track.by_artist.tracks[2]",
+								"data.spotify_search_track.by_artist.tracks",
+								"data.spotify_search_track.by_artist",
+								"data.spotify_search_track.by_artist.tracks[3].id",
+								"data.spotify_search_track.by_artist.tracks[3]",
+								"data.spotify_search_track.by_artist.tracks",
+								"data.spotify_search_track.by_artist",
+								"data.spotify_search_track.by_artist.tracks[4].id",
+								"data.spotify_search_track.by_artist.tracks[4]",
+								"data.spotify_search_track.by_artist.tracks",
+								"data.spotify_search_track.by_artist",
+								"data.spotify_search_track.by_artist.tracks[5].id",
+								"data.spotify_search_track.by_artist.tracks[5]",
+								"data.spotify_search_track.by_artist.tracks",
+								"data.spotify_search_track.by_artist",
+								"data.spotify_search_track.by_artist.tracks[6].id",
+								"data.spotify_search_track.by_artist.tracks[6]",
+								"data.spotify_search_track.by_artist.tracks",
+								"data.spotify_search_track.by_artist",
+								"data.spotify_search_track.by_artist.tracks[7].id",
+								"data.spotify_search_track.by_artist.tracks[7]",
+								"data.spotify_search_track.by_artist.tracks",
+								"data.spotify_search_track.by_artist",
+							],
+						},
+					},
+					"mode":                "managed",
+					"name":                "playlist",
+					"provider_config_key": "spotify",
+					"schema_version":      0,
+					"type":                "spotify_playlist",
+				},
+				{
+					"address": "data.spotify_search_track.by_artist",
+					"expressions": {
+						"artist": {
+							"constant_value": "The Weeknd",
+						},
+					},
+					"mode":                "data",
+					"name":                "by_artist",
+					"provider_config_key": "spotify",
+					"schema_version":      0,
+					"type":                "spotify_search_track",
+				},
+			],
+			"variables": {
+				"spotify_api_key": {},
+			},
+		},
+	},
+	"format_version": "0.2",
+	"output_changes": {
+		"playlist_url": {
+			"actions": [
+				"create",
+			],
+			"after_sensitive":  false,
+			"after_unknown":    true,
+			"before":           null,
+			"before_sensitive": false,
+		},
+	},
+	"planned_values": {
+		"outputs": {
+			"playlist_url": {
+				"sensitive": false,
+			},
+		},
+		"root_module": {
+			"resources": [
+				{
+					"address":        "spotify_playlist.playlist",
+					"mode":           "managed",
+					"name":           "playlist",
+					"provider_name":  "registry.terraform.io/conradludgate/spotify",
+					"schema_version": 0,
+					"sensitive_values": {
+						"tracks": [
+							false,
+							false,
+							false,
+							false,
+							false,
+							false,
+							false,
+							false,
+						],
+					},
+					"type": "spotify_playlist",
+					"values": {
+						"description": "This playlist was created by Terraform",
+						"name":        "Terraform Summer Playlist",
+						"public":      true,
+						"tracks": [
+							"37BZB0z9T8Xu7U3e65qxFy",
+							"0VjIjW4GlUZAMYd2vXMi3b",
+							"6OGogr19zPTM4BALXuMQpF",
+							"5QO79kh1waicV47BqGRL3g",
+							"7fBv7CLKzipRk6EC6TWHOB",
+							"7MXVkk9YMctZqd1Srtv4MB",
+							"6M3PsepEj5gyJoIi7Xvr7u",
+							"22VdIZQfgXJea34mQxlt81",
+						],
+					},
+				},
+			],
+		},
+	},
+	"prior_state": {
+		"format_version":    "0.2",
+		"terraform_version": "1.0.6",
+		"values": {
+			"root_module": {
+				"resources": [
+					{
+						"address":        "data.spotify_search_track.by_artist",
+						"mode":           "data",
+						"name":           "by_artist",
+						"provider_name":  "registry.terraform.io/conradludgate/spotify",
+						"schema_version": 0,
+						"sensitive_values": {
+							"tracks": [
+								{
+									"artists": [
+										false,
+										false,
+									],
+								},
+								{
+									"artists": [
+										false,
+									],
+								},
+								{
+									"artists": [
+										false,
+									],
+								},
+								{
+									"artists": [
+										false,
+									],
+								},
+								{
+									"artists": [
+										false,
+									],
+								},
+								{
+									"artists": [
+										false,
+										false,
+									],
+								},
+								{
+									"artists": [
+										false,
+									],
+								},
+								{
+									"artists": [
+										false,
+									],
+								},
+								{
+									"artists": [
+										false,
+									],
+								},
+								{
+									"artists": [
+										false,
+									],
+								},
+							],
+						},
+						"type": "spotify_search_track",
+						"values": {
+							"album":    null,
+							"artist":   "The Weeknd",
+							"explicit": true,
+							"id":       "1631546504",
+							"limit":    10,
+							"name":     null,
+							"tracks": [
+								{
+									"album": "2fyOpT5c9kxR8zbDh6UtXh",
+									"artists": [
+										"1Xyo4u8uXC1ZmMpatF05PJ",
+										"66CXWjxzNUsdJxJ2JdwvnR",
+									],
+									"id":   "37BZB0z9T8Xu7U3e65qxFy",
+									"name": "Save Your Tears (with Ariana Grande) (Remix)",
+								},
+								{
+									"album": "4yP0hdKOZPNshxUOjY0cZj",
+									"artists": [
+										"1Xyo4u8uXC1ZmMpatF05PJ",
+									],
+									"id":   "0VjIjW4GlUZAMYd2vXMi3b",
+									"name": "Blinding Lights",
+								},
+								{
+									"album": "6DmXKM13nNgIIby2FdK0f8",
+									"artists": [
+										"1Xyo4u8uXC1ZmMpatF05PJ",
+									],
+									"id":   "6OGogr19zPTM4BALXuMQpF",
+									"name": "Take My Breath",
+								},
+								{
+									"album": "4yP0hdKOZPNshxUOjY0cZj",
+									"artists": [
+										"1Xyo4u8uXC1ZmMpatF05PJ",
+									],
+									"id":   "5QO79kh1waicV47BqGRL3g",
+									"name": "Save Your Tears",
+								},
+								{
+									"album": "0P3oVJBFOv3TDXlYRhGL7s",
+									"artists": [
+										"1Xyo4u8uXC1ZmMpatF05PJ",
+									],
+									"id":   "7fBv7CLKzipRk6EC6TWHOB",
+									"name": "The Hills",
+								},
+								{
+									"album": "2ODvWsOgouMbaA5xf0RkJe",
+									"artists": [
+										"1Xyo4u8uXC1ZmMpatF05PJ",
+										"4tZwfgrHOc3mvqYlEYSvVi",
+									],
+									"id":   "7MXVkk9YMctZqd1Srtv4MB",
+									"name": "Starboy",
+								},
+								{
+									"album": "4lBrDelXR6Sn0k54a7UWMz",
+									"artists": [
+										"1Xyo4u8uXC1ZmMpatF05PJ",
+									],
+									"id":   "6M3PsepEj5gyJoIi7Xvr7u",
+									"name": "Take My Breath",
+								},
+								{
+									"album": "0P3oVJBFOv3TDXlYRhGL7s",
+									"artists": [
+										"1Xyo4u8uXC1ZmMpatF05PJ",
+									],
+									"id":   "22VdIZQfgXJea34mQxlt81",
+									"name": "Can't Feel My Face",
+								},
+								{
+									"album": "4yP0hdKOZPNshxUOjY0cZj",
+									"artists": [
+										"1Xyo4u8uXC1ZmMpatF05PJ",
+									],
+									"id":   "7szuecWAPwGoV1e5vGu8tl",
+									"name": "In Your Eyes",
+								},
+								{
+									"album": "4qZBW3f2Q8y0k1A84d4iAO",
+									"artists": [
+										"1Xyo4u8uXC1ZmMpatF05PJ",
+									],
+									"id":   "09mEdoA6zrmBPgTEN5qXmN",
+									"name": "Call Out My Name",
+								},
+							],
+							"year": null,
+						},
+					},
+				],
+			},
+		},
+	},
+	"resource_changes": [
+		{
+			"address": "spotify_playlist.playlist",
+			"change": {
+				"actions": [
+					"create",
+				],
+				"after": {
+					"description": "This playlist was created by Terraform",
+					"name":        "Terraform Summer Playlist",
+					"public":      true,
+					"tracks": [
+						"37BZB0z9T8Xu7U3e65qxFy",
+						"0VjIjW4GlUZAMYd2vXMi3b",
+						"6OGogr19zPTM4BALXuMQpF",
+						"5QO79kh1waicV47BqGRL3g",
+						"7fBv7CLKzipRk6EC6TWHOB",
+						"7MXVkk9YMctZqd1Srtv4MB",
+						"6M3PsepEj5gyJoIi7Xvr7u",
+						"22VdIZQfgXJea34mQxlt81",
+					],
+				},
+				"after_sensitive": {
+					"tracks": [
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+					],
+				},
+				"after_unknown": {
+					"id":          true,
+					"snapshot_id": true,
+					"tracks": [
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+						false,
+					],
+				},
+				"before":           null,
+				"before_sensitive": false,
+			},
+			"mode":          "managed",
+			"name":          "playlist",
+			"provider_name": "registry.terraform.io/conradludgate/spotify",
+			"type":          "spotify_playlist",
+		},
+	],
+	"terraform_version": "1.0.6",
+	"variables": {
+		"spotify_api_key": {
+			"value": "x_oSPuwb9RyyKHYHs2nsWvae-4SSTJWnHtI9KNi6PEl0uawMhHRJFui4SqeGQsXV",
+		},
+	},
+}

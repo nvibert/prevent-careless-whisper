@@ -1,0 +1,16 @@
+{
+	"records": [
+		{
+			"key": "test/prevent_careless_whisper/fail/tfplan-functions",
+			"source": "./tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/Users/nicovibert/Scripts/spotify-sentinel-working/test/prevent_careless_whisper/tfplan-functions.sentinel"
+		},
+		{
+			"key": "test/prevent_careless_whisper/pass/tfplan-functions",
+			"source": "./tfplan-functions.sentinel",
+			"sourceSum": "",
+			"dest": "/Users/nicovibert/Scripts/spotify-sentinel-working/test/prevent_careless_whisper/tfplan-functions.sentinel"
+		}
+	]
+}

@@ -1,0 +1,26 @@
+# Imports mock data
+import "tfplan/v2" as tfplan
+
+import "tfplan-functions" as plan
+
+# Get all playlists
+playlists = filter tfplan.resource_changes as _, rc {
+	rc.type is "spotify_playlist" and
+		(rc.change.actions contains "create" or rc.change.actions is ["update"])
+}
+
+# Disallowed Track
+disallowed_track = [
+	"5WDLRQ3VCdVrKw0njWe5E5",
+]
+
+violatingTrack = plan.filter_attribute_contains_items_from_list(playlists,
+	"tracks", disallowed_track, true)
+
+print(violatingTrack)
+
+validated = length(violatingTrack["messages"]) is 0
+
+main = rule {
+	validated is true
+}
